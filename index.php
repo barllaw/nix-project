@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 
 session_start();
 
@@ -30,6 +29,3 @@ function head($title){
 function footer(){
     include 'html/footer.php';
 }
-=======
-echo 'Hello, world!';
->>>>>>> bee6a75246a75440b0e8386cc8ef428f1af549fd
