@@ -25,6 +25,9 @@
                 <a href="signup">
                     <li>Sign Up</li>
                 </a>
+                <?php
+                $id = isset($_SESSION['id']) ? $_SESSION['id'] : null;
+                if ( $id ):?>
                 <a href="posts">
                     <li>List posts</li>
                 </a>
@@ -34,6 +37,7 @@
                 <a href="logout">
                     <li>Logout</li>
                 </a>
+                <?php endif;?>
             </ul>
         </div>
     </div>

@@ -23,10 +23,9 @@ $sql = "SELECT * FROM users WHERE login = ?";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$login]);
 $rows = $stmt->fetch(PDO::FETCH_OBJ);
-$_SESSION['id'] = $rows->id;
-$_SESSION['login'] = $rows->login;
-$_SESSION['password'] = $rows->password;
-
+foreach ($rows as $key => $value) {
+    $_SESSION[$key] = $value;
+}
 var_dump($_SESSION);
 
 header('Location: profile');
